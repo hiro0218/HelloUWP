@@ -6,11 +6,26 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid Background="{ThemeResource AppBarBackgroundThemeBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="512"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
-            <TextBlock Text="Hello UWP World!" FontSize="24" FontWeight="Light" Margin="12"/>
-            <TextBlock Text="{x:Bind DeviceFamily}" Margin="12,0,0,0"></TextBlock>
-        </StackPanel>
-    </Grid>
+            <StackPanel Grid.Column="0" Background="#333" Padding="24">
+                <TextBlock Text="Hello UWP World!" FontSize="24" FontWeight="Light" Margin="12" Foreground="white" />
+                <TextBlock Text="{x:Bind DeviceFamily}" Margin="12,0,0,0" Foreground="white"></TextBlock>
+                <Image Source="Assets/SplashScreen.scale-200.png" Stretch="Uniform" Margin="0,0,12,0" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Background="LightBlue" 
+                    Padding="24" HorizontalAlignment="Stretch">
+                <Image Source="Assets/StoreLogo.png" Height="150" Width="150" HorizontalAlignment="Center" />
+                <TextBlock Foreground="white" FontSize="48" Text="Hello! Right Side" FontWeight="Bold" Margin="0,0,0,16" HorizontalAlignment="Center"/>
+                <TextBlock Text="Hello!" FontSize="24" HorizontalAlignment="Center" />
+                <TextBlock Text="Thank you for Scroll." Margin="0,1000,0,0" HorizontalAlignment="Center" />
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Page>
