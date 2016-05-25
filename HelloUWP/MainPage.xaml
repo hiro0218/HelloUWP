@@ -17,6 +17,9 @@
                 <TextBlock Text="Hello UWP World!" FontSize="24" FontWeight="Light" Margin="12" Foreground="white" />
                 <TextBlock Text="{x:Bind DeviceFamily}" Margin="12,0,0,0" Foreground="white"></TextBlock>
                 <Image Source="Assets/SplashScreen.scale-200.png" Stretch="Uniform" Margin="0,0,12,0" />
+                <Button Height="71" Click="Button_Click" HorizontalAlignment="Center" Margin="56,0,38,0" Width="370" FontSize="32" Background="#FFCCCCCC" BorderBrush="#FFAAAAAA">
+                    Click Me!
+                </Button>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Background="LightBlue" 
